@@ -26,7 +26,7 @@ def Re_file(input_path, out_list, end_with=[]):
     """
     :param input_path: files root path.
     :param out_list: [].
-    :param end_with: file extension ->list.
+    :param end_with: file extension ->list[].
     :return: out list of file path.
     """
     for i in os.listdir(input_path):
