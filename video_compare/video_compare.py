@@ -70,34 +70,38 @@ def video_compare(video_arr, video_label, out_name, label_color=(0, 0, 255)):
 
 def main():
     # 视频序列路径和label
-    vid_1 = "data/1.mp4"
-    label_1 = "video_1"
+    vid_1 = "/home/wmj/Downloads/vis_results/multi_vibe.mp4"
+    label_1 = "multi_vibe"
 
-    vid_2 = "data/2.mp4"
-    label_2 = "video_2"
+    vid_2 = "/home/wmj/Downloads/vis_results/multi_vibe_smooth.mp4"
+    label_2 = "multi_vibe_smooth"
 
-    vid_3 = "data/3.mp4"
-    label_3 = "video_3"
+    vid_3 = "/home/wmj/Downloads/vis_results/multi_vibe_smooth_deciwatch.mp4"
+    label_3 = "multi_vibe_smooth_deciwatch"
 
-    vid_4 = "data/4.mp4"
-    label_4 = "video_4"
+    vid_4 = "/home/wmj/Downloads/vis_results/multi_vibe_deciwatch.mp4"
+    label_4 = "multi_vibe_deciwatch"
 
-    vid_5 = "data/5.mp4"
-    label_5 = "video_5"
+    vid_5 = "/home/wmj/Downloads/vis_results/multi.mp4"
+    label_5 = "multi"
 
-    vid_6 = "data/6.mp4"
-    label_6 = "video_6"
+    vid_6 = "/home/wmj/Downloads/vis_results/multi/123.mp4"
+    label_6 = "multi_result"
+
+
 
     # 排列方式1
     # video_list = [[vid_1, vid_2, vid_3, vid_4, vid_5, vid_6]]
     # video_label = [[label_1, label_2, label_3, label_4, label_5, label_6]]
 
     # 排列方式2
-    video_list = [[vid_1, vid_2, vid_3],
-                  [vid_4, vid_5, vid_6]]
+    video_list = [[vid_5, vid_6],
+                  [vid_1, vid_2],
+                  [vid_3, vid_4]]
 
-    video_label = [[label_1, label_2, label_3],
-                   [label_4, label_5, label_6]]
+    video_label = [[label_5, label_6],
+                   [label_1, label_2],
+                   [label_3, label_4]]
 
     # 排列方式3
     # video_list = [[vid_1, vid_2, vid_3],
@@ -109,7 +113,7 @@ def main():
     #                [label_1, label_2, label_3],
     #                [label_1, label_2, label_3]]
     # 输出文件名
-    out_video_name = "123.mp4"
+    out_video_name = "/home/wmj/Downloads/vis_results/multi_compare.mp4"
     video_compare(video_list, video_label, out_video_name)
 
 
