@@ -3,7 +3,7 @@
 # @Author : wmj
 # @Email : wmj142326@163.com
 # @File : video_gap_img.py
-# @Note : 将视频按间隔提取帧
+# @Note : 视频间隔抽帧
 # ---------------------------
 # -*- coding:utf-8 -*-
 import cv2
@@ -11,12 +11,12 @@ import os
 
 
 def main():
-    video_src_path = "videos"  # 保存视频的文件夹
-    image_save_path = "images"  # 输出图片的文件夹
-    frame_gap = 10  # 每隔10帧读取一帧
+    video_src_path = "videos"  # 保存视频的路径
+    image_save_path = "images"  # 输出图片的路径
+    frame_gap = 10  # 每隔10帧抽取一帧
     end_with_video = [".mp4", ".avi"]  # 要抽帧的视频后缀
     end_with_img = ".jpg"  # 要保存的图片格式
-    file_tree = True  # 是否保留原有视频文件结构, 默认为False
+    file_tree = False  # 是否保留原有视频文件结构, 默认为False
 
     video_gap_img(video_src_path, image_save_path, frame_gap, end_with_video, end_with_img, file_tree)
 

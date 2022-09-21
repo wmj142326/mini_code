@@ -10,3 +10,11 @@
 
 2.`img_ext_tras`:
 图片后缀名无损转换，[BiLibili观看](https://www.bilibili.com/video/BV1dV4y1M7LW?p=2)
+
+3.`video_gap_image`:
+视频间隔抽帧，[BiLibili观看](https://www.bilibili.com/video/BV1dV4y1M7LW?p=3)
+
+    Re_file(): 遍历文件夹下指定后缀所有文件
+
+
+
