@@ -16,7 +16,7 @@ def main():
     frame_gap = 10  # 每隔10帧读取一帧
     end_with_video = [".mp4", ".avi"]  # 要抽帧的视频后缀
     end_with_img = ".jpg"  # 要保存的图片格式
-    file_tree = True  # 是否保留原有视频文件结构
+    file_tree = True  # 是否保留原有视频文件结构, 默认为False
 
     video_gap_img(video_src_path, image_save_path, frame_gap, end_with_video, end_with_img, file_tree)
 
