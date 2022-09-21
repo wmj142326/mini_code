@@ -36,7 +36,7 @@ def Re_file(input_path, out_list, end_with='.jpg'):
             if os.path.splitext(i)[1] == end_with:
                 out_list.append(i)
         else:
-            Re_file(i,out_list, end_with)
+            Re_file(i, out_list, end_with)
     return out_list
 
 
@@ -72,7 +72,7 @@ def main():
     file_list = Re_file(inpath, out_list, end_with='.jpg')
     print(file_list)
 
-    # 任意格式转换为jpg
+    # 任意格式转换互相转换
     img_to_jpg(inpath, outpath, ext_input=".jpg", ext_output=".png")
 
 
