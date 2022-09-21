@@ -23,25 +23,26 @@ def create_folder(folder):
 
 
 # 获取路径下所有相同后缀名文件
-def Re_file(input_path, end_with='.jpg'):
+def Re_file(input_path, out_list, end_with='.jpg'):
     """
     :param input_path: files root path.
+    :param out_list: [].
     :param end_with: file extension.
     :return: out list of file path.
     """
-    out_list = []
     for i in os.listdir(input_path):
         i = os.path.join(input_path, i)
         if os.path.isfile(i):
             if os.path.splitext(i)[1] == end_with:
                 out_list.append(i)
         else:
-            Re_file(i, out_list, end_with)
+            Re_file(i,out_list, end_with)
     return out_list
 
 
 def rename_file(inpath, outpath, ext_input=".png", ext_output=".jpg"):
-    out_list = Re_file(inpath, end_with=ext_input)
+    out_list = []
+    out_list = Re_file(inpath, out_list, end_with=ext_input)
     for i in range(len(out_list)):
         img_path = out_list[i]
         target_path = os.path.join(outpath, os.path.splitext(img_path.split("/")[-1])[0] + ext_output)
@@ -51,7 +52,8 @@ def rename_file(inpath, outpath, ext_input=".png", ext_output=".jpg"):
 
 
 def img_to_jpg(inpath, outpath, ext_input=".png", ext_output=".txt"):
-    out_list = Re_file(inpath, end_with=ext_input)
+    out_list = []
+    out_list = Re_file(inpath, out_list, end_with=ext_input)
     for i in range(len(out_list)):
         im = Image.open(out_list[i])
         im = im.convert('RGB')
@@ -66,7 +68,8 @@ def main():
     inpath = "images_input"
     outpath = "images_output"
 
-    file_list = Re_file(inpath, end_with='.jpg')
+    out_list = []
+    file_list = Re_file(inpath, out_list, end_with='.jpg')
     print(file_list)
 
     # 任意格式转换为jpg
