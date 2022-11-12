@@ -37,6 +37,7 @@ def video_compare(video_arr, video_label, out_name, label_color=(0, 0, 255)):
     assert len(np.shape(video_arr)) == 2, "请使用[[]],而不是[],且确保列数相等"
     h, w = np.shape(video_arr)[0], np.shape(video_arr)[1]
     cap_video = cv2.VideoCapture(video_arr[0][0])
+    frames_nums = cap_video.get(cv2.CAP_PROP_FRAME_COUNT)
     ret, frame = cap_video.read()
     size = (int(cap_video.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap_video.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 
@@ -51,7 +52,7 @@ def video_compare(video_arr, video_label, out_name, label_color=(0, 0, 255)):
     tmp_img_folder = create_folder("tmp_img_folder")
     frame_id = 0
     while ret:
-        print("\r", "frame_id: ---", frame_id, "---", end="", flush=True)
+        print("\r", "frame_id: ---", frame_id, '/', int(frames_nums), "---", end="", flush=True)
         ret, frame = cap_video.read()
         frame_id += 1
         for i in range(h):
@@ -70,7 +71,7 @@ def video_compare(video_arr, video_label, out_name, label_color=(0, 0, 255)):
 
 def main():
     # 视频序列路径和label
-    vid_1 = "/home/wmj/Downloads/vis_results/multi_vibe.mp4"
+    vid_1 = "./ikun/1"
     label_1 = "multi_vibe"
 
     vid_2 = "/home/wmj/Downloads/vis_results/multi_vibe_smooth.mp4"
@@ -95,12 +96,10 @@ def main():
     # video_label = [[label_1, label_2, label_3, label_4, label_5, label_6]]
 
     # 排列方式2
-    video_list = [[vid_5, vid_6],
-                  [vid_1, vid_2],
+    video_list = [[vid_1, vid_2],
                   [vid_3, vid_4]]
 
-    video_label = [[label_5, label_6],
-                   [label_1, label_2],
+    video_label = [[label_1, label_2],
                    [label_3, label_4]]
 
     # 排列方式3
