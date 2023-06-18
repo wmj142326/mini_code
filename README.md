@@ -19,4 +19,5 @@
 
 5.`image_to_video`:图片转视频，[BiLibili观看](https://www.bilibili.com/video/BV1vP4y127gy/?spm_id_from=333.999.0.0&vd_source=1d5df1f3ef5b9d878809e5674ac44906)
 
+6.`2D_3D_visualization`:关键点骨骼绘制与可视化
 
