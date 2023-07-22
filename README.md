@@ -1,5 +1,5 @@
 # mini_code
-[![Security Status](source/1618321036001443840.svg)](https://www.murphysec.com/accept?code=4e7f9b357c1dc60fba014fe4914c346e&type=1&from=2&t=2)
+[![Security Status](./source/1618321036001443840.svg)](https://www.murphysec.com/accept?code=4e7f9b357c1dc60fba014fe4914c346e&type=1&from=2&t=2)
 
 日常科研小脚本儿~
 
