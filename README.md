@@ -21,3 +21,4 @@
 
 6.`2D_3D_visualization`:关键点骨骼绘制与可视化
 
+7.`wget_download`:wget自动下载文件
