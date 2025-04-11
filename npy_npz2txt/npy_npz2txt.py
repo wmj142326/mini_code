@@ -208,6 +208,4 @@ root.mainloop()
 
 """
 pyinstaller --onefile --windowed --icon=npz.ico --add-data "logo.png;." npy_npz2txt.py
-pyinstaller --onefile --windowed --icon=npz.ico --add-data "logo.png:." npy_npz2txt.py
-
 """
