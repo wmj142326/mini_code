@@ -22,3 +22,7 @@
 6.`2D_3D_visualization`:关键点骨骼绘制与可视化
 
 7.`wget_download`:wget自动下载文件
+
+8.`jsonformat`: json格式化软件
+
+9.`npy_npz2txt`: npy,npz文件转txt软件
